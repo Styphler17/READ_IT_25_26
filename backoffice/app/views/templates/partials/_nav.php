@@ -34,6 +34,9 @@
                         <li><a href="#">Ajouter un utilisateur</a></li>
                     </ul>
                 </li>
+                <li class="justify-end">
+                    <a href="<?php echo PUBLIC_BASE_URL; ?>users/logout">LOGOUT</a></li>
+
             </ul>
         </div>
         <!--/.nav-collapse -->

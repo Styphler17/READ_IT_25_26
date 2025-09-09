@@ -1,8 +1,8 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
-        <h1>Theme example</h1>
+        <h1>Dashboard</h1>
         <p>
-            <strong>Bienvenue <?php echo $_SESSION['user']['firstname']; ?></strong>
+            <strong>Bienvenue <?php echo (isset($_SESSION['users']['firstname'])) ?></strong>
             Voici le tableau de bord de votre backoffice.
         </p>
         <p>
