@@ -4,10 +4,11 @@ namespace App\Models\CategoriesModel;
 
 use \PDO;
 
-function findAll(PDO $connection,):array{
+function findAll(PDO $conn): array
+{
     $sql = "SELECT *
             FROM categories
-            ORDER BY name ASC";
-    $rs = $connection->query($sql);               
-    return $rs->fetchall(PDO::FETCH_ASSOC);
+            ORDER BY name ASC;";
+    $rs = $conn->query($sql);
+    return $rs->fetchAll(PDO::FETCH_ASSOC);
 }

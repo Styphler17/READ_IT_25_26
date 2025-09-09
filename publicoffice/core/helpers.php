@@ -2,23 +2,21 @@
 
 namespace Core\Helpers;
 
-function truncate(string $resume, int $length=100): string{
-
-    if(strlen($resume)>$length){
-        $cut =substr($resume,0,$length);
-        $cut=substr($cut,0,strrpos($cut,' '));
-        return $cut.'...';
-    }else{
-        return $resume;
+function truncate(string $text, int $length = 100): string
+{
+    if (strlen($text) > $length) {
+        $cut = substr($text, 0, $length);
+        $cut = substr($cut, 0, strrpos($cut, ' '));
+        return $cut . '...';
+    } else {
+        return $text;
     }
 }
 
-
-// Slugify a string
-function slugify(string $text):string{
-    
+function slugify(string $text): string
+{
     // Strip html tags
-    $text=strip_tags($text);
+    $text = strip_tags($text);
     // Replace non letter or digits by -
     $text = preg_replace('~[^\pL\d]+~u', '-', $text);
     // Transliterate
@@ -33,8 +31,9 @@ function slugify(string $text):string{
     // Lowercase
     $text = strtolower($text);
     // Check if it is empty
-    if (empty($text)) { return 'n-a'; }
+    if (empty($text)) {
+        return 'n-a';
+    }
     // Return result
     return $text;
-
 }

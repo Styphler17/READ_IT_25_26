@@ -6,9 +6,9 @@ include_once '../app/controllers/postsController.php';
 
 switch ($_GET['posts']):
     case 'show':
-        PostsController\showAction($connection, $_GET['id']);
-    break;
+        PostsController\showAction($conn, $_GET['id']);
+        break;
     default:
-        PostsController\indexAction($connection);
-    break;
-    endswitch;
+        PostsController\indexAction($conn);
+        break;
+endswitch;
